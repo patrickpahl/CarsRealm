@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2116694527059247F16085D6 /* Pods_CarsRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC96F25BBE11DB27371D25E /* Pods_CarsRealm.framework */; };
 		A361701F2098EF3C00B75875 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A361701E2098EF3C00B75875 /* AppDelegate.swift */; };
 		A36170212098EF3C00B75875 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36170202098EF3C00B75875 /* ViewController.swift */; };
 		A36170242098EF3C00B75875 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A36170222098EF3C00B75875 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06B0160F1375B93B9B05C7DE /* Pods-CarsRealm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarsRealm.release.xcconfig"; path = "Pods/Target Support Files/Pods-CarsRealm/Pods-CarsRealm.release.xcconfig"; sourceTree = "<group>"; };
+		5BC96F25BBE11DB27371D25E /* Pods_CarsRealm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarsRealm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A361701B2098EF3C00B75875 /* CarsRealm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarsRealm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A361701E2098EF3C00B75875 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A36170202098EF3C00B75875 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		A36170252098EF3C00B75875 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A36170282098EF3C00B75875 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A361702A2098EF3C00B75875 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9D28469A749CB10D589EE72 /* Pods-CarsRealm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarsRealm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarsRealm/Pods-CarsRealm.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2116694527059247F16085D6 /* Pods_CarsRealm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E2BFF49DA266C21740C9EDC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B9D28469A749CB10D589EE72 /* Pods-CarsRealm.debug.xcconfig */,
+				06B0160F1375B93B9B05C7DE /* Pods-CarsRealm.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A36170122098EF3C00B75875 = {
 			isa = PBXGroup;
 			children = (
 				A361701D2098EF3C00B75875 /* CarsRealm */,
 				A361701C2098EF3C00B75875 /* Products */,
+				4E2BFF49DA266C21740C9EDC /* Pods */,
+				CF70E95AD94D99E97126DA76 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = CarsRealm;
 			sourceTree = "<group>";
 		};
+		CF70E95AD94D99E97126DA76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BC96F25BBE11DB27371D25E /* Pods_CarsRealm.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A361702D2098EF3C00B75875 /* Build configuration list for PBXNativeTarget "CarsRealm" */;
 			buildPhases = (
+				7408910D0827E448CB043E6B /* [CP] Check Pods Manifest.lock */,
 				A36170172098EF3C00B75875 /* Sources */,
 				A36170182098EF3C00B75875 /* Frameworks */,
 				A36170192098EF3C00B75875 /* Resources */,
+				448460E59DE4649F800015C3 /* [CP] Embed Pods Frameworks */,
+				CFBEF4F33E8B00172C027F8C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		448460E59DE4649F800015C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CarsRealm/Pods-CarsRealm-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CarsRealm/Pods-CarsRealm-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7408910D0827E448CB043E6B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CarsRealm-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFBEF4F33E8B00172C027F8C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CarsRealm/Pods-CarsRealm-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A36170172098EF3C00B75875 /* Sources */ = {
@@ -272,6 +355,7 @@
 		};
 		A361702E2098EF3C00B75875 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9D28469A749CB10D589EE72 /* Pods-CarsRealm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +371,7 @@
 		};
 		A361702F2098EF3C00B75875 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06B0160F1375B93B9B05C7DE /* Pods-CarsRealm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
