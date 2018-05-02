@@ -14,7 +14,7 @@ class Car: Object {
     }
 
     var makeAndModel: String {
-        return make + "" + model
+        return make + " " + model
     }
 
 }

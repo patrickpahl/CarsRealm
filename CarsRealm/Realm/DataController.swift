@@ -37,8 +37,9 @@ class DataController {
 
     func filterByMakeName(_ makeText: String) -> Results<Car> {
         let realm = try! Realm()
-        let predicate = NSPredicate(format: "make = %@", makeText)
-        let cars = realm.objects(Car.self).filter(predicate)
+        //let predicate = NSPredicate(format: "make = %@", makeText)
+        //let cars = realm.objects(Car.self).filter(predicate)  /// case sensitive filter
+        let cars = realm.objects(Car.self).filter("make contains[c] %d", makeText) /// case insensitive filter
         return cars
     }
 
