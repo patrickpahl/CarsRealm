@@ -21,9 +21,9 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
 
-//        let realm = try! Realm()
-//        let user = User.defaultUser(in: realm)
-//        cars = user.cars
+        let realm = try! Realm()
+        cars = realm.objects(Car.self)
+        tableView.reloadData()
     }
 
     // TableView
@@ -52,9 +52,6 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
         guard let makeText = makeTextField.text else { return }
 
         let realm = try! Realm()
-        //let user = User.defaultUser(in: realm)
-        //cars = user.cars.filter("make = \(makeText)")
-
         let predicate = NSPredicate(format: "make = %@", makeText)
         cars = realm.objects(Car.self).filter(predicate)
 

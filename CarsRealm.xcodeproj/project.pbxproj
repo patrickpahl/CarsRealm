@@ -18,7 +18,6 @@
 		A36170392098F4BF00B75875 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36170382098F4BF00B75875 /* CarTableViewCell.swift */; };
 		A361703B2098F5BF00B75875 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = A361703A2098F5BF00B75875 /* Car.swift */; };
 		A361703D2098FD1200B75875 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A361703C2098FD1200B75875 /* DataController.swift */; };
-		A361703F2099190700B75875 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A361703E2099190700B75875 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +35,6 @@
 		A36170382098F4BF00B75875 /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
 		A361703A2098F5BF00B75875 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		A361703C2098FD1200B75875 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
-		A361703E2099190700B75875 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B9D28469A749CB10D589EE72 /* Pods-CarsRealm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarsRealm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarsRealm/Pods-CarsRealm.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				A361703A2098F5BF00B75875 /* Car.swift */,
-				A361703E2099190700B75875 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -273,7 +270,6 @@
 				A361701F2098EF3C00B75875 /* AppDelegate.swift in Sources */,
 				A36170332098F45300B75875 /* MainViewController.swift in Sources */,
 				A361703B2098F5BF00B75875 /* Car.swift in Sources */,
-				A361703F2099190700B75875 /* User.swift in Sources */,
 				A36170352098F46300B75875 /* AddViewController.swift in Sources */,
 				A36170372098F46F00B75875 /* FilterViewController.swift in Sources */,
 				A36170392098F4BF00B75875 /* CarTableViewCell.swift in Sources */,

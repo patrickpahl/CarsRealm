@@ -7,7 +7,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     @IBOutlet weak var tableView: UITableView!
 
-    var cars: List<Car>!
+    var cars: Results<Car>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +20,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewWillAppear(true)
 
         let realm = try! Realm()
-        User.defaultUser(in: realm)
+        cars = realm.objects(Car.self)
 
-        cars = User.defaultUser(in: realm).cars
         print("Cars count = \(cars.count)")
         tableView.reloadData()
     }

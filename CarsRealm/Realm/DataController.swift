@@ -8,7 +8,6 @@ class DataController {
     func addCarToList(year: String, make: String, model: String, zeroToSixty: String) {
 
         let realm = try! Realm()
-        let user = User.defaultUser(in: realm)
 
         let car = Car()
         car.year = year
@@ -17,9 +16,7 @@ class DataController {
         car.zeroToSixty = zeroToSixty
 
         try! realm.write {
-            user.cars.append(car)
+            realm.add(car)
         }
     }
-
-
 }
