@@ -14,7 +14,7 @@
 		A36170292098EF3C00B75875 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A36170272098EF3C00B75875 /* LaunchScreen.storyboard */; };
 		A36170332098F45300B75875 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36170322098F45300B75875 /* MainViewController.swift */; };
 		A36170352098F46300B75875 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36170342098F46300B75875 /* AddViewController.swift */; };
-		A36170372098F46F00B75875 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36170362098F46F00B75875 /* DetailViewController.swift */; };
+		A36170372098F46F00B75875 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36170362098F46F00B75875 /* FilterViewController.swift */; };
 		A36170392098F4BF00B75875 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36170382098F4BF00B75875 /* CarTableViewCell.swift */; };
 		A361703B2098F5BF00B75875 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = A361703A2098F5BF00B75875 /* Car.swift */; };
 		A361703D2098FD1200B75875 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A361703C2098FD1200B75875 /* DataController.swift */; };
@@ -32,7 +32,7 @@
 		A361702A2098EF3C00B75875 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A36170322098F45300B75875 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A36170342098F46300B75875 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
-		A36170362098F46F00B75875 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A36170362098F46F00B75875 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		A36170382098F4BF00B75875 /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
 		A361703A2098F5BF00B75875 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		A361703C2098FD1200B75875 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 			children = (
 				A36170322098F45300B75875 /* MainViewController.swift */,
 				A36170342098F46300B75875 /* AddViewController.swift */,
-				A36170362098F46F00B75875 /* DetailViewController.swift */,
+				A36170362098F46F00B75875 /* FilterViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -275,7 +275,7 @@
 				A361703B2098F5BF00B75875 /* Car.swift in Sources */,
 				A361703F2099190700B75875 /* User.swift in Sources */,
 				A36170352098F46300B75875 /* AddViewController.swift in Sources */,
-				A36170372098F46F00B75875 /* DetailViewController.swift in Sources */,
+				A36170372098F46F00B75875 /* FilterViewController.swift in Sources */,
 				A36170392098F4BF00B75875 /* CarTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
