@@ -5,10 +5,8 @@ class DataController {
 
     static let shared = DataController()
 
-    func addCarToList(year: String, make: String, model: String, zeroToSixty: String) {
-
+    func addCar(year: String, make: String, model: String, zeroToSixty: String) {
         let realm = try! Realm()
-
         let car = Car()
         car.year = year
         car.make = make
@@ -19,4 +17,22 @@ class DataController {
             realm.add(car)
         }
     }
+
+    func deleteCar(car: Car) {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.delete(car)
+        }
+    }
+
+    func updateCar(car: Car, year: String, make: String, model: String, zeroToSixty: String) {
+        let realm = try! Realm()
+        try! realm.write {
+            car.year = year
+            car.make = make
+            car.model = model
+            car.zeroToSixty = zeroToSixty
+        }
+    }
+
 }

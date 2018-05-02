@@ -31,6 +31,9 @@ class AddViewController: UIViewController {
         } else {
             deleteButton.isHidden = false
             addButton.setTitle("Update", for: .normal)
+            if let car = car {
+            print("Car's UUID = \(car.uuid)")
+            }
         }
     }
 
@@ -61,17 +64,23 @@ class AddViewController: UIViewController {
 
         if car == nil {
             // Add
-            DataController.shared.addCarToList(year: yearText, make: makeText, model: modelText, zeroToSixty: zeroToSixtyText)
+            DataController.shared.addCar(year: yearText, make: makeText, model: modelText, zeroToSixty: zeroToSixtyText)
             navigationController?.popViewController(animated: true)
         } else {
             // Update
-            
+            if let car = car {
+            DataController.shared.updateCar(car: car, year: yearText, make: makeText, model: modelText, zeroToSixty: zeroToSixtyText)
+                navigationController?.popViewController(animated: true)
+            }
         }
     }
     
     @IBAction func deleteButtonTapped(_ sender: UIButton) {
         // Delete
+        guard let car = car else { return }
 
+        DataController.shared.deleteCar(car: car)
+        navigationController?.popViewController(animated: true)
     }
     
 }
