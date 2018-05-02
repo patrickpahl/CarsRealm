@@ -3,6 +3,8 @@ import RealmSwift
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    let detailSegueIdentifier = "detailSegue"
+
     @IBOutlet weak var tableView: UITableView!
 
     var cars: List<Car>!
@@ -38,6 +40,17 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.configureWithCar(car)
 
         return cell
+    }
+
+    // Navigation
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == detailSegueIdentifier {
+            guard let addVC = segue.destination as? AddViewController,
+            let indexPath = tableView.indexPathForSelectedRow else { return }
+            let car = cars[indexPath.row]
+            addVC.car = car
+        }
     }
 
 }

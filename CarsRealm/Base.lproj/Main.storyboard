@@ -70,7 +70,7 @@
                                             <outlet property="modelLabel" destination="21e-VK-2ZV" id="A3S-Os-biN"/>
                                             <outlet property="yearLabel" destination="cOt-0D-gT2" id="aIX-De-DYQ"/>
                                             <outlet property="zeroToSixtyLabel" destination="yyc-2b-ikO" id="xO4-3k-EbK"/>
-                                            <segue destination="D6l-3s-cT1" kind="show" id="rDT-jH-cw9"/>
+                                            <segue destination="8wC-r1-C0X" kind="show" identifier="detailSegue" id="UlM-Kb-zmh"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -235,11 +235,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVO-Yd-LP4">
+                                <rect key="frame" x="0.0" y="532" width="375" height="60"/>
+                                <color key="backgroundColor" red="0.34901960780000002" green="0.37254901959999998" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="TeX-9B-Rsg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" red="0.6723342538" green="0.1334964931" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteButtonTapped:" destination="8wC-r1-C0X" eventType="touchUpInside" id="ZNK-mf-R1d"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="C9H-lx-9Up" firstAttribute="trailing" secondItem="Wd7-mC-6MZ" secondAttribute="trailing" id="1zF-sI-GuS"/>
                             <constraint firstItem="CYX-TT-C1U" firstAttribute="top" secondItem="JlU-DU-tzL" secondAttribute="bottom" constant="15" id="4SP-kK-lpR"/>
+                            <constraint firstItem="lVO-Yd-LP4" firstAttribute="leading" secondItem="C9H-lx-9Up" secondAttribute="leading" id="91f-WR-geb"/>
                             <constraint firstItem="tcu-0H-sRs" firstAttribute="top" secondItem="CYX-TT-C1U" secondAttribute="bottom" constant="15" id="9xL-5d-P54"/>
                             <constraint firstItem="Wd7-mC-6MZ" firstAttribute="leading" secondItem="C9H-lx-9Up" secondAttribute="leading" id="AKl-sM-kcJ"/>
                             <constraint firstItem="C9H-lx-9Up" firstAttribute="bottom" secondItem="Wd7-mC-6MZ" secondAttribute="bottom" id="BJZ-oT-fxI"/>
@@ -249,8 +264,10 @@
                             <constraint firstItem="C9H-lx-9Up" firstAttribute="trailing" secondItem="CYX-TT-C1U" secondAttribute="trailing" constant="25" id="JNq-8E-fUg"/>
                             <constraint firstItem="tZx-cG-v13" firstAttribute="top" secondItem="C9H-lx-9Up" secondAttribute="top" constant="100" id="LqI-XU-XW9"/>
                             <constraint firstItem="adS-1x-bZI" firstAttribute="centerY" secondItem="JlU-DU-tzL" secondAttribute="centerY" id="Sby-4J-Js4"/>
+                            <constraint firstItem="Wd7-mC-6MZ" firstAttribute="top" secondItem="lVO-Yd-LP4" secondAttribute="bottom" constant="15" id="Sey-Mo-abQ"/>
                             <constraint firstItem="C9H-lx-9Up" firstAttribute="trailing" secondItem="tcu-0H-sRs" secondAttribute="trailing" constant="25" id="VO1-LU-x6g"/>
                             <constraint firstItem="YAQ-C9-4yO" firstAttribute="leading" secondItem="C9H-lx-9Up" secondAttribute="leading" constant="50" id="W1d-ly-YfD"/>
+                            <constraint firstItem="C9H-lx-9Up" firstAttribute="trailing" secondItem="lVO-Yd-LP4" secondAttribute="trailing" id="Xdb-H8-Pui"/>
                             <constraint firstItem="RjY-EZ-8cO" firstAttribute="top" secondItem="C9H-lx-9Up" secondAttribute="top" constant="100" id="Yry-io-BpT"/>
                             <constraint firstItem="ry2-6A-OA5" firstAttribute="top" secondItem="C9H-lx-9Up" secondAttribute="top" constant="20" id="a20-sc-liF"/>
                             <constraint firstItem="C9H-lx-9Up" firstAttribute="trailing" secondItem="JlU-DU-tzL" secondAttribute="trailing" constant="25" id="haI-cB-M83"/>
@@ -264,6 +281,7 @@
                     </view>
                     <connections>
                         <outlet property="addButton" destination="Wd7-mC-6MZ" id="aYL-HX-0B3"/>
+                        <outlet property="deleteButton" destination="lVO-Yd-LP4" id="4oH-PB-mGm"/>
                         <outlet property="makeTextField" destination="JlU-DU-tzL" id="pEx-rv-7GU"/>
                         <outlet property="modelTextField" destination="CYX-TT-C1U" id="D5Z-T1-jb1"/>
                         <outlet property="yearTextField" destination="RjY-EZ-8cO" id="wZc-Pf-Ww4"/>
@@ -293,4 +311,7 @@
             <point key="canvasLocation" x="-262" y="118"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="UlM-Kb-zmh"/>
+    </inferredMetricsTieBreakers>
 </document>
