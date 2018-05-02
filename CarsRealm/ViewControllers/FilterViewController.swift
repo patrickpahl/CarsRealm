@@ -40,8 +40,8 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
 
         let car = cars[indexPath.row]
 
-        cell.textLabel?.text = car.make
-        cell.detailTextLabel?.text = car.model
+        cell.textLabel?.text = car.year
+        cell.detailTextLabel?.text = car.makeAndModel
 
         return cell
     }
@@ -51,7 +51,7 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
     @IBAction func filterButtonTapped(_ sender: UIButton) {
         guard let makeText = makeTextField.text else { return }
 
-        cars = DataController.shared.filterByMakeName(makeText)
+        cars = DataController.shared.filterByMakeName(makeText).sorted(byKeyPath: "year", ascending: false)
         tableView.reloadData()
     }
 }

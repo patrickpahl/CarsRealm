@@ -20,7 +20,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewWillAppear(true)
 
         let realm = try! Realm()
-        cars = realm.objects(Car.self)
+        cars = realm.objects(Car.self).sorted(byKeyPath: "make")
 
         print("Cars count = \(cars.count)")
         tableView.reloadData()
