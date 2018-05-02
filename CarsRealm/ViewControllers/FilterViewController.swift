@@ -22,7 +22,7 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
         super.viewWillAppear(true)
 
         let realm = try! Realm()
-        cars = realm.objects(Car.self)
+        cars = realm.objects(Car.self).sorted(byKeyPath: "year", ascending: false)
         tableView.reloadData()
     }
 
