@@ -51,10 +51,7 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
     @IBAction func filterButtonTapped(_ sender: UIButton) {
         guard let makeText = makeTextField.text else { return }
 
-        let realm = try! Realm()
-        let predicate = NSPredicate(format: "make = %@", makeText)
-        cars = realm.objects(Car.self).filter(predicate)
-
+        cars = DataController.shared.filterByMakeName(makeText)
         tableView.reloadData()
     }
 }

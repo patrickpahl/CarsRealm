@@ -35,4 +35,11 @@ class DataController {
         }
     }
 
+    func filterByMakeName(_ makeText: String) -> Results<Car> {
+        let realm = try! Realm()
+        let predicate = NSPredicate(format: "make = %@", makeText)
+        let cars = realm.objects(Car.self).filter(predicate)
+        return cars
+    }
+
 }
