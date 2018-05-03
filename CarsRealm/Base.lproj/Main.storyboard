@@ -271,7 +271,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jmz-Ea-weP">
-                                                    <rect key="frame" x="166" y="11" width="42" height="21"/>
+                                                    <rect key="frame" x="196.5" y="11" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -286,7 +286,7 @@
                                             <constraints>
                                                 <constraint firstItem="pOX-ur-rAJ" firstAttribute="leading" secondItem="2JZ-os-ezb" secondAttribute="leading" constant="20" id="Jpk-qe-DoU"/>
                                                 <constraint firstItem="Jmz-Ea-weP" firstAttribute="centerY" secondItem="2JZ-os-ezb" secondAttribute="centerY" id="Mx9-Od-y9R"/>
-                                                <constraint firstItem="Jmz-Ea-weP" firstAttribute="centerX" secondItem="2JZ-os-ezb" secondAttribute="centerX" id="N8q-eo-gUA"/>
+                                                <constraint firstItem="Jmz-Ea-weP" firstAttribute="centerX" secondItem="2JZ-os-ezb" secondAttribute="centerX" constant="30" id="N8q-eo-gUA"/>
                                                 <constraint firstItem="pOX-ur-rAJ" firstAttribute="centerY" secondItem="2JZ-os-ezb" secondAttribute="centerY" id="jna-at-2Au"/>
                                                 <constraint firstAttribute="trailing" secondItem="0el-xn-1Zr" secondAttribute="trailing" constant="20" id="r26-uS-TC7"/>
                                                 <constraint firstItem="0el-xn-1Zr" firstAttribute="centerY" secondItem="2JZ-os-ezb" secondAttribute="centerY" id="vB7-kr-Iur"/>
@@ -307,13 +307,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sales Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1S-Kj-bck">
-                                <rect key="frame" x="260" y="70" width="85" height="21"/>
+                                <rect key="frame" x="270" y="70" width="85" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Sold" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNU-xM-YBC">
-                                <rect key="frame" x="150" y="70" width="75" height="21"/>
+                                <rect key="frame" x="180" y="70" width="75" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -321,9 +321,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Zk7-nL-8Yp" firstAttribute="trailing" secondItem="i1S-Kj-bck" secondAttribute="trailing" constant="30" id="5rF-pT-L3l"/>
+                            <constraint firstItem="Zk7-nL-8Yp" firstAttribute="trailing" secondItem="i1S-Kj-bck" secondAttribute="trailing" constant="20" id="5rF-pT-L3l"/>
                             <constraint firstItem="ulA-pb-jfW" firstAttribute="top" secondItem="Zk7-nL-8Yp" secondAttribute="top" constant="35" id="A27-Ub-yRQ"/>
-                            <constraint firstItem="PNU-xM-YBC" firstAttribute="centerX" secondItem="TOD-4R-gaA" secondAttribute="centerX" id="Lob-9S-QdK"/>
+                            <constraint firstItem="PNU-xM-YBC" firstAttribute="centerX" secondItem="TOD-4R-gaA" secondAttribute="centerX" constant="30" id="Lob-9S-QdK"/>
                             <constraint firstItem="QTW-cx-WGF" firstAttribute="leading" secondItem="Zk7-nL-8Yp" secondAttribute="leading" constant="30" id="Ns7-LC-UNA"/>
                             <constraint firstItem="i1S-Kj-bck" firstAttribute="top" secondItem="Zk7-nL-8Yp" secondAttribute="top" constant="6" id="Wcw-gT-MTo"/>
                             <constraint firstItem="ulA-pb-jfW" firstAttribute="bottom" secondItem="Zk7-nL-8Yp" secondAttribute="bottom" id="ebI-n6-zO7"/>

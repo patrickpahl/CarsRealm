@@ -17,9 +17,7 @@ class CarSoldViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
 
-        //let realm = try! Realm()
-        //cars = realm.objects(Car.self).sorted(byKeyPath: "year", ascending: false)
-        cars = DataController.shared.filterSoldCars()
+        cars = DataController.shared.filterSoldCars().sorted(byKeyPath: "soldDate", ascending: false)
         tableView.reloadData()
     }
 
