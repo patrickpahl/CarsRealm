@@ -22,4 +22,8 @@ class Car: Object {
         return make + " " + model
     }
 
+    var yearMakeModel: String {
+        return year + " " + make + " " + model
+    }
+
 }

@@ -20,6 +20,8 @@
 		A361703D2098FD1200B75875 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A361703C2098FD1200B75875 /* DataController.swift */; };
 		A3929BC2209A5AF50034A710 /* MigrationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3929BC1209A5AF50034A710 /* MigrationHandler.swift */; };
 		A3929BC4209A615D0034A710 /* MigrationOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3929BC3209A615D0034A710 /* MigrationOne.swift */; };
+		A3999459209BBE5800BCE6E2 /* SoldCarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3999458209BBE5800BCE6E2 /* SoldCarTableViewCell.swift */; };
+		A399945B209BBF2900BCE6E2 /* CarSoldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A399945A209BBF2900BCE6E2 /* CarSoldViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		A361703C2098FD1200B75875 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		A3929BC1209A5AF50034A710 /* MigrationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationHandler.swift; sourceTree = "<group>"; };
 		A3929BC3209A615D0034A710 /* MigrationOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationOne.swift; sourceTree = "<group>"; };
+		A3999458209BBE5800BCE6E2 /* SoldCarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoldCarTableViewCell.swift; sourceTree = "<group>"; };
+		A399945A209BBF2900BCE6E2 /* CarSoldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarSoldViewController.swift; sourceTree = "<group>"; };
 		B9D28469A749CB10D589EE72 /* Pods-CarsRealm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarsRealm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarsRealm/Pods-CarsRealm.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +125,7 @@
 				A36170322098F45300B75875 /* MainViewController.swift */,
 				A36170342098F46300B75875 /* AddViewController.swift */,
 				A36170362098F46F00B75875 /* FilterViewController.swift */,
+				A399945A209BBF2900BCE6E2 /* CarSoldViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				A36170382098F4BF00B75875 /* CarTableViewCell.swift */,
+				A3999458209BBE5800BCE6E2 /* SoldCarTableViewCell.swift */,
 			);
 			path = TableviewCell;
 			sourceTree = "<group>";
@@ -274,6 +280,8 @@
 			files = (
 				A361703D2098FD1200B75875 /* DataController.swift in Sources */,
 				A3929BC2209A5AF50034A710 /* MigrationHandler.swift in Sources */,
+				A3999459209BBE5800BCE6E2 /* SoldCarTableViewCell.swift in Sources */,
+				A399945B209BBF2900BCE6E2 /* CarSoldViewController.swift in Sources */,
 				A361701F2098EF3C00B75875 /* AppDelegate.swift in Sources */,
 				A36170332098F45300B75875 /* MainViewController.swift in Sources */,
 				A361703B2098F5BF00B75875 /* Car.swift in Sources */,

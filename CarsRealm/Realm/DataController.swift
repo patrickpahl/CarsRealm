@@ -63,4 +63,11 @@ class DataController {
         return cars
     }
 
+    func filterSoldCars() -> Results<Car> {
+
+        let realm = try! Realm()
+        let soldCars = realm.objects(Car.self).filter("sold = true")
+        return soldCars
+    }
+
 }

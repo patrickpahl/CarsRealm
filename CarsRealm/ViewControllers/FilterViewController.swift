@@ -21,6 +21,12 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
 
+        loadAllCarsSortedByYear()
+    }
+
+    // Methods
+
+    func loadAllCarsSortedByYear() {
         let realm = try! Realm()
         cars = realm.objects(Car.self).sorted(byKeyPath: "year", ascending: false)
         tableView.reloadData()
@@ -54,4 +60,9 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
         cars = DataController.shared.filterByMakeName(makeText).sorted(byKeyPath: "year", ascending: false)
         tableView.reloadData()
     }
+
+    @IBAction func clearButtonTapped(_ sender: UIButton) {
+        loadAllCarsSortedByYear()
+    }
+    
 }

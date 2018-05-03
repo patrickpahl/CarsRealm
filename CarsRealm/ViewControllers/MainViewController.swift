@@ -38,6 +38,12 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         let car = cars[indexPath.row]
         cell.configureWithCar(car)
 
+        if car.sold == true {
+            cell.backgroundColor = .green
+        } else {
+            cell.backgroundColor = .white
+        }
+
         return cell
     }
 
