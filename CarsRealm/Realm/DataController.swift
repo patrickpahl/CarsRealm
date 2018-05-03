@@ -19,13 +19,16 @@ class DataController {
 //        Realm.Configuration.defaultConfiguration = config
 //    }
 
-    func addCar(year: String, make: String, model: String, zeroToSixty: String) {
+    func addCar(year: String, make: String, model: String, zeroToSixty: String, sold: Bool, soldDate: Date?, salesPrice: Int) {
         let realm = try! Realm()
         let car = Car()
         car.year = year
         car.make = make
         car.model = model
         car.zeroToSixty = zeroToSixty
+        car.sold = sold
+        car.soldDate = soldDate
+        car.salesPrice = salesPrice
 
         try! realm.write {
             realm.add(car)
@@ -39,13 +42,16 @@ class DataController {
         }
     }
 
-    func updateCar(car: Car, year: String, make: String, model: String, zeroToSixty: String) {
+    func updateCar(car: Car, year: String, make: String, model: String, zeroToSixty: String, sold: Bool, soldDate: Date?, salesPrice: Int) {
         let realm = try! Realm()
         try! realm.write {
             car.year = year
             car.make = make
             car.model = model
             car.zeroToSixty = zeroToSixty
+            car.sold = sold
+            car.soldDate = soldDate
+            car.salesPrice = salesPrice
         }
     }
 

@@ -333,7 +333,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RjY-EZ-8cO">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="RjY-EZ-8cO">
                                 <rect key="frame" x="200" y="124" width="150" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="bIu-C3-XDb"/>
@@ -348,7 +348,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JlU-DU-tzL">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="JlU-DU-tzL">
                                 <rect key="frame" x="200" y="169" width="150" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="lbe-A0-3Sv"/>
@@ -363,7 +363,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CYX-TT-C1U">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="CYX-TT-C1U">
                                 <rect key="frame" x="200" y="214" width="150" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Qb6-bt-gdH"/>
@@ -372,7 +372,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tcu-0H-sRs">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="tcu-0H-sRs">
                                 <rect key="frame" x="200" y="259" width="150" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="kLU-xB-tZF"/>
@@ -415,7 +415,7 @@
                                     <action selector="deleteButtonTapped:" destination="8wC-r1-C0X" eventType="touchUpInside" id="ZNK-mf-R1d"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iPE-nL-sZS">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="iPE-nL-sZS">
                                 <rect key="frame" x="200" y="350" width="150" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Rde-fW-HVG"/>
@@ -438,6 +438,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rNa-mt-MhL">
                                 <rect key="frame" x="200" y="304" width="51" height="31"/>
+                                <connections>
+                                    <action selector="soldSwitchValueChanged:" destination="8wC-r1-C0X" eventType="valueChanged" id="DMM-SW-xSE"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sales Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucL-QV-Vxb">
                                 <rect key="frame" x="50" y="399.5" width="85" height="21"/>
@@ -445,7 +448,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qGJ-Zw-eYw">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="qGJ-Zw-eYw">
                                 <rect key="frame" x="200" y="395" width="150" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="9c7-8k-Mvw"/>
@@ -498,9 +501,15 @@
                     </view>
                     <connections>
                         <outlet property="addButton" destination="Wd7-mC-6MZ" id="aYL-HX-0B3"/>
+                        <outlet property="dateSoldLabel" destination="jKV-s6-Sdh" id="zZF-Lb-PV5"/>
+                        <outlet property="dateSoldTextField" destination="iPE-nL-sZS" id="Kve-Qj-ate"/>
                         <outlet property="deleteButton" destination="lVO-Yd-LP4" id="4oH-PB-mGm"/>
                         <outlet property="makeTextField" destination="JlU-DU-tzL" id="pEx-rv-7GU"/>
                         <outlet property="modelTextField" destination="CYX-TT-C1U" id="D5Z-T1-jb1"/>
+                        <outlet property="salesPriceLabel" destination="ucL-QV-Vxb" id="zlO-LD-RfR"/>
+                        <outlet property="salesPriceTextField" destination="qGJ-Zw-eYw" id="5iQ-zn-lNO"/>
+                        <outlet property="soldLabel" destination="rLg-Ff-GFz" id="18W-47-caC"/>
+                        <outlet property="soldSwitch" destination="rNa-mt-MhL" id="m7N-RI-I5s"/>
                         <outlet property="yearTextField" destination="RjY-EZ-8cO" id="wZc-Pf-Ww4"/>
                         <outlet property="zeroToSixtyTextField" destination="tcu-0H-sRs" id="BBD-Of-7yI"/>
                     </connections>

@@ -12,6 +12,7 @@ class Car: Object {
     // New attributes
     @objc dynamic var sold = false
     @objc dynamic var soldDate: Date?
+    @objc dynamic var salesPrice = 0
 
     override static func primaryKey() -> String? {
         return "uuid"
