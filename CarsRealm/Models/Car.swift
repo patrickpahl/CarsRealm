@@ -10,8 +10,8 @@ class Car: Object {
     @objc dynamic var zeroToSixty = "7.0"
 
     // New attributes
-//    @objc dynamic var sold = false
-//    @objc dynamic var soldDate: Date?
+    @objc dynamic var sold = false
+    @objc dynamic var soldDate: Date?
 
     override static func primaryKey() -> String? {
         return "uuid"

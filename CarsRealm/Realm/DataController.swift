@@ -5,18 +5,19 @@ class DataController {
 
     static let shared = DataController()
 
-    init() {
-        setupRealm()
-    }
-
-    func setupRealm() {
-        let currentVersion: UInt64 = 0
-        let config = Realm.Configuration(
-            schemaVersion: currentVersion,
-            migrationBlock: { migration, oldSchemaVersion in
-        })
-        Realm.Configuration.defaultConfiguration = config
-    }
+//    init() {
+//        setupRealm()
+//    }
+//
+//    /// Increase current version when performing a migration
+//    func setupRealm() {
+//        let currentVersion: UInt64 = 2
+//        let config = Realm.Configuration(
+//            schemaVersion: currentVersion,
+//            migrationBlock: { migration, oldSchemaVersion in
+//        })
+//        Realm.Configuration.defaultConfiguration = config
+//    }
 
     func addCar(year: String, make: String, model: String, zeroToSixty: String) {
         let realm = try! Realm()
