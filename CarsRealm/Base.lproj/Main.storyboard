@@ -333,7 +333,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="RjY-EZ-8cO">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RjY-EZ-8cO">
                                 <rect key="frame" x="200" y="124" width="150" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="bIu-C3-XDb"/>
@@ -348,7 +348,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="JlU-DU-tzL">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JlU-DU-tzL">
                                 <rect key="frame" x="200" y="169" width="150" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="lbe-A0-3Sv"/>
@@ -363,7 +363,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="CYX-TT-C1U">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CYX-TT-C1U">
                                 <rect key="frame" x="200" y="214" width="150" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Qb6-bt-gdH"/>
@@ -372,7 +372,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="tcu-0H-sRs">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tcu-0H-sRs">
                                 <rect key="frame" x="200" y="259" width="150" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="kLU-xB-tZF"/>
@@ -415,7 +415,7 @@
                                     <action selector="deleteButtonTapped:" destination="8wC-r1-C0X" eventType="touchUpInside" id="ZNK-mf-R1d"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="iPE-nL-sZS">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iPE-nL-sZS">
                                 <rect key="frame" x="200" y="350" width="150" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Rde-fW-HVG"/>
@@ -448,7 +448,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="qGJ-Zw-eYw">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qGJ-Zw-eYw">
                                 <rect key="frame" x="200" y="395" width="150" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="9c7-8k-Mvw"/>
@@ -457,6 +457,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6C-WY-kJV">
+                                <rect key="frame" x="150" y="350" width="34" height="30"/>
+                                <state key="normal" title="clear"/>
+                                <connections>
+                                    <action selector="clearButtonTapped:" destination="8wC-r1-C0X" eventType="touchUpInside" id="Syy-7r-i8h"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -472,6 +479,7 @@
                             <constraint firstItem="C9H-lx-9Up" firstAttribute="bottom" secondItem="Wd7-mC-6MZ" secondAttribute="bottom" id="BJZ-oT-fxI"/>
                             <constraint firstItem="sFv-da-mCb" firstAttribute="centerY" secondItem="CYX-TT-C1U" secondAttribute="centerY" id="DS1-KA-YQt"/>
                             <constraint firstItem="jKV-s6-Sdh" firstAttribute="leading" secondItem="C9H-lx-9Up" secondAttribute="leading" constant="50" id="DrS-az-hoR"/>
+                            <constraint firstItem="E6C-WY-kJV" firstAttribute="centerY" secondItem="iPE-nL-sZS" secondAttribute="centerY" id="Edb-Ep-BgU"/>
                             <constraint firstItem="tZx-cG-v13" firstAttribute="leading" secondItem="C9H-lx-9Up" secondAttribute="leading" constant="50" id="IMw-5c-Enw"/>
                             <constraint firstItem="JlU-DU-tzL" firstAttribute="top" secondItem="RjY-EZ-8cO" secondAttribute="bottom" constant="15" id="Ina-hF-j2s"/>
                             <constraint firstItem="ucL-QV-Vxb" firstAttribute="centerY" secondItem="qGJ-Zw-eYw" secondAttribute="centerY" id="J6V-fm-I8T"/>
@@ -496,6 +504,7 @@
                             <constraint firstItem="YAQ-C9-4yO" firstAttribute="centerY" secondItem="tcu-0H-sRs" secondAttribute="centerY" id="vMd-P5-v4s"/>
                             <constraint firstItem="ry2-6A-OA5" firstAttribute="centerX" secondItem="Vwp-5n-lmC" secondAttribute="centerX" id="wrO-yd-yQz"/>
                             <constraint firstItem="sFv-da-mCb" firstAttribute="leading" secondItem="C9H-lx-9Up" secondAttribute="leading" constant="50" id="wuT-zq-byb"/>
+                            <constraint firstItem="iPE-nL-sZS" firstAttribute="leading" secondItem="E6C-WY-kJV" secondAttribute="trailing" constant="16" id="xj1-AJ-By4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="C9H-lx-9Up"/>
                     </view>

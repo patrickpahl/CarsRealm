@@ -63,6 +63,7 @@ class AddViewController: UIViewController {
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "M/d/yyyy"
                 dateSoldTextField.text = dateFormatter.string(from: car.soldDate!)
+                dateSelected = car.soldDate!
             }
 
             let salesPrice = car.salesPrice
@@ -148,10 +149,20 @@ class AddViewController: UIViewController {
             salesPrice = 0
         }
 
-        if carSold == true && soldDate == nil && salesPrice == 0 {
-            print("If car is sold, date sold and sales price is required - return out of func")
-            return
-        }
+        print("sold? \(carSold)")
+
+        print("SOLD DATE =")
+        print(soldDate)
+
+        print("SALES PRICE =")
+        print("\(salesPrice)")
+
+        if carSold == true {
+            if soldDate == nil || salesPrice == 0 {
+                    print("If car is sold, date sold and sales price is required - return out of func")
+                    return
+                }
+            }
 
         if car == nil {
             // Add
@@ -180,7 +191,13 @@ class AddViewController: UIViewController {
         if carSold == false {
             dateSoldTextField.text = nil
             salesPriceTextField.text = nil
+            dateSelected = nil
         }
+    }
+
+    @IBAction func clearButtonTapped(_ sender: UIButton) {
+        dateSoldTextField.text = ""
+        dateSelected = nil
     }
     
 }
