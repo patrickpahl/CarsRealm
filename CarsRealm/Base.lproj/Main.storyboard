@@ -540,7 +540,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="DVA-6z-1Kv"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                 <state key="normal" title="Add">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -560,7 +560,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="TeX-9B-Rsg"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                 <state key="normal" title="Delete">
                                     <color key="titleColor" red="0.6723342538" green="0.1334964931" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>

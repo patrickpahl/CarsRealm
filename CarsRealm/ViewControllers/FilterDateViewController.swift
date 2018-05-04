@@ -14,7 +14,7 @@ class FilterDateViewController: UIViewController, UITableViewDelegate, UITableVi
     var endDateSelected: Date?
     let startDatePicker = UIDatePicker()
     let endDatePicker = UIDatePicker()
-    var cars: Results<Car>?
+    var cars: [Car]?  ///var cars: Results<Car>?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,22 +22,16 @@ class FilterDateViewController: UIViewController, UITableViewDelegate, UITableVi
         tableView.dataSource = self
         tableView.delegate = self
         setupCloseKeyboardGesture()
+        setupDatePickerView()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
 
-        getAllSoldCars()
+        ///getAllSoldCars()
     }
 
     // Setup
-
-    func getAllSoldCars() {
-        cars = DataController.shared.filterSoldCars().sorted(byKeyPath: "soldDate", ascending: false)
-        tableView.reloadData()
-    }
-
-    // Methods
 
     func setupCloseKeyboardGesture() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
@@ -71,6 +65,13 @@ class FilterDateViewController: UIViewController, UITableViewDelegate, UITableVi
     }
 
     // Methods
+    ///
+    /*
+    func getAllSoldCars() {
+        cars = DataController.shared.filterSoldCars().sorted(byKeyPath: "soldDate", ascending: false)
+        tableView.reloadData()
+    }
+     */
 
     @objc func datePickerChanged(sender: UIDatePicker) {
         let dateFormatter = DateFormatter()
@@ -99,8 +100,15 @@ class FilterDateViewController: UIViewController, UITableViewDelegate, UITableVi
     // Actions
 
     @IBAction func searchButtonTapped(_ sender: UIButton) {
-        /// use start and end date to filter results of sold cars
 
+        guard let startDate = startDateSelected,
+            let endDate = endDateSelected else {
+            print("Need both start and end date")
+            return
+        }
+
+        cars = DataController.shared.searchSoldCarsBySelectedDates(startDate: startDate, endDate: endDate)
+        tableView.reloadData()
     }
 
     @IBAction func clearButtonTapped(_ sender: UIButton) {
@@ -109,7 +117,7 @@ class FilterDateViewController: UIViewController, UITableViewDelegate, UITableVi
         startDateTextField.text = nil
         endDateTextField.text = nil
 
-        getAllSoldCars()
+        ///getAllSoldCars()
     }
 
     // TableView Methods
