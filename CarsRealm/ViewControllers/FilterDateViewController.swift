@@ -12,6 +12,8 @@ class FilterDateViewController: UIViewController, UITableViewDelegate, UITableVi
 
     var startDateSelected: Date?
     var endDateSelected: Date?
+    let startDatePicker = UIDatePicker()
+    let endDatePicker = UIDatePicker()
     var cars: Results<Car>?
 
     override func viewDidLoad() {
@@ -19,6 +21,7 @@ class FilterDateViewController: UIViewController, UITableViewDelegate, UITableVi
 
         tableView.dataSource = self
         tableView.delegate = self
+        setupCloseKeyboardGesture()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -47,18 +50,24 @@ class FilterDateViewController: UIViewController, UITableViewDelegate, UITableVi
     }
 
     func setupDatePickerView() {
-        let datePicker = UIDatePicker()
-        datePicker.datePickerMode = .date
-        datePicker.addTarget(self, action: #selector(datePickerChanged), for: .valueChanged)
-        dateSoldTextField.inputView = datePicker
+
+        startDatePicker.datePickerMode = .date
+        endDatePicker.datePickerMode = .date
+
+        startDatePicker.addTarget(self, action: #selector(datePickerChanged), for: .valueChanged)
+        endDatePicker.addTarget(self, action: #selector(datePickerChanged), for: .valueChanged)
+
+        startDateTextField.inputView = startDatePicker
+        endDateTextField.inputView = endDatePicker
+
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 40))
         toolbar.barStyle = .blackTranslucent
         toolbar.tintColor = .white
-        let todayButton = UIBarButtonItem(title: "Today", style: .plain, target: self, action: #selector(datePickerTodayButtonTapped))
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(datePickerDoneButtonTapped))
         let flexButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
-        toolbar.setItems([todayButton, flexButton, doneButton], animated: true)
-        dateSoldTextField.inputAccessoryView = toolbar
+        toolbar.setItems([flexButton, doneButton], animated: true)
+        startDateTextField.inputAccessoryView = toolbar
+        endDateTextField.inputAccessoryView = toolbar
     }
 
     // Methods
@@ -66,30 +75,40 @@ class FilterDateViewController: UIViewController, UITableViewDelegate, UITableVi
     @objc func datePickerChanged(sender: UIDatePicker) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .short
-        dateSelected = sender.date
-        dateSoldTextField.text = dateFormatter.string(from: sender.date)
-        print(dateSoldTextField.text ?? "")
-    }
 
-    @objc func datePickerTodayButtonTapped(sender: UIBarButtonItem) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .short
-        dateSelected = Date()
-        dateSoldTextField.text = dateFormatter.string(from: Date())
-        dateSoldTextField.resignFirstResponder()
+        if sender == startDatePicker {
+            startDateSelected = sender.date
+            startDateTextField.text = dateFormatter.string(from: sender.date)
+            if let startDateSelected = startDateSelected {
+                print("Start date = \(dateFormatter.string(from: startDateSelected))") }
+        }
+
+        if sender == endDatePicker {
+            endDateSelected = sender.date
+            endDateTextField.text = dateFormatter.string(from: sender.date)
+            if let endDateSelected = endDateSelected {
+                print("End date = \(dateFormatter.string(from: endDateSelected))") }
+        }
     }
 
     @objc func datePickerDoneButtonTapped() {
-        dateSoldTextField.resignFirstResponder()
+        startDateTextField.resignFirstResponder()
+        endDateTextField.resignFirstResponder()
     }
 
     // Actions
 
     @IBAction func searchButtonTapped(_ sender: UIButton) {
+        /// use start and end date to filter results of sold cars
 
     }
 
     @IBAction func clearButtonTapped(_ sender: UIButton) {
+        startDateSelected = nil
+        endDateSelected = nil
+        startDateTextField.text = nil
+        endDateTextField.text = nil
+
         getAllSoldCars()
     }
 
@@ -110,7 +129,7 @@ class FilterDateViewController: UIViewController, UITableViewDelegate, UITableVi
 
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "M/d/yyyy"
-        cell.detailTextLabel?.text = dateFormatter.string(from: car.soldDate)
+        cell.detailTextLabel?.text = dateFormatter.string(from: car.soldDate!)
 
         return cell
     }
