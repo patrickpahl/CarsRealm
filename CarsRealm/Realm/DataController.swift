@@ -64,10 +64,29 @@ class DataController {
     }
 
     func filterSoldCars() -> Results<Car> {
-
         let realm = try! Realm()
         let soldCars = realm.objects(Car.self).filter("sold = true")
         return soldCars
+    }
+
+    func searchSoldCarsBySelectedDates(startDate: Date, endDate: Date) -> [Car] {
+        let realm = try! Realm()
+
+        let soldCars = realm.objects(Car.self).filter("sold = true")
+        let carsFromStartDate =  soldCars.filter("soldDate <= %@", startDate)
+        let carsFromEndDate =   soldCars.filter("soldDate >= %@", endDate)
+
+        var resultsCars: [Car]?
+
+        for startCar in carsFromStartDate {
+            for endCar in carsFromEndDate {
+                if startCar.uuid == endCar.uuid {
+                    resultsCars?.append(startCar)
+                }
+            }
+        }
+        guard let cars = resultsCars else { return [] }
+        return cars
     }
 
 }

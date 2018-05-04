@@ -18,6 +18,7 @@
 		A36170392098F4BF00B75875 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36170382098F4BF00B75875 /* CarTableViewCell.swift */; };
 		A361703B2098F5BF00B75875 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = A361703A2098F5BF00B75875 /* Car.swift */; };
 		A361703D2098FD1200B75875 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A361703C2098FD1200B75875 /* DataController.swift */; };
+		A3847AF1209CA699009EFF7F /* FilterDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3847AF0209CA699009EFF7F /* FilterDateViewController.swift */; };
 		A3929BC2209A5AF50034A710 /* MigrationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3929BC1209A5AF50034A710 /* MigrationHandler.swift */; };
 		A3929BC4209A615D0034A710 /* MigrationOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3929BC3209A615D0034A710 /* MigrationOne.swift */; };
 		A3999459209BBE5800BCE6E2 /* SoldCarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3999458209BBE5800BCE6E2 /* SoldCarTableViewCell.swift */; };
@@ -39,6 +40,7 @@
 		A36170382098F4BF00B75875 /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
 		A361703A2098F5BF00B75875 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		A361703C2098FD1200B75875 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		A3847AF0209CA699009EFF7F /* FilterDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDateViewController.swift; sourceTree = "<group>"; };
 		A3929BC1209A5AF50034A710 /* MigrationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationHandler.swift; sourceTree = "<group>"; };
 		A3929BC3209A615D0034A710 /* MigrationOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationOne.swift; sourceTree = "<group>"; };
 		A3999458209BBE5800BCE6E2 /* SoldCarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoldCarTableViewCell.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				A36170342098F46300B75875 /* AddViewController.swift */,
 				A36170362098F46F00B75875 /* FilterViewController.swift */,
 				A399945A209BBF2900BCE6E2 /* CarSoldViewController.swift */,
+				A3847AF0209CA699009EFF7F /* FilterDateViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				A36170332098F45300B75875 /* MainViewController.swift in Sources */,
 				A361703B2098F5BF00B75875 /* Car.swift in Sources */,
 				A3929BC4209A615D0034A710 /* MigrationOne.swift in Sources */,
+				A3847AF1209CA699009EFF7F /* FilterDateViewController.swift in Sources */,
 				A36170352098F46300B75875 /* AddViewController.swift in Sources */,
 				A36170372098F46F00B75875 /* FilterViewController.swift in Sources */,
 				A36170392098F4BF00B75875 /* CarTableViewCell.swift in Sources */,

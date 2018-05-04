@@ -30,7 +30,7 @@ class AddViewController: UIViewController {
 
         setupUI()
         setupCar()
-        setupPickerView()
+        setupDatePickerView()
         setupSalesPriceTextField()
     }
 
@@ -89,7 +89,7 @@ class AddViewController: UIViewController {
         salesPriceTextField.keyboardType = UIKeyboardType.decimalPad
     }
 
-    func setupPickerView() {
+    func setupDatePickerView() {
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = .date
         datePicker.addTarget(self, action: #selector(datePickerChanged), for: .valueChanged)
