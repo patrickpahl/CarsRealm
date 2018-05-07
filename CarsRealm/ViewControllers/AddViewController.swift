@@ -17,9 +17,26 @@ class AddViewController: UIViewController {
     @IBOutlet weak var clearButton: UIButton!
 
     var car: Car?
-    var carSold: Bool = false
     var dateSelected: Date?
     var salesPrice = 0
+
+    var carSold: Bool = false {
+        didSet {
+            if carSold == true {
+                dateSoldTextField.isHidden = false
+                salesPriceTextField.isHidden = false
+                dateSoldLabel.isHidden = false
+                salesPriceLabel.isHidden = false
+                clearButton.isHidden = false
+            } else {
+                dateSoldTextField.isHidden = true
+                salesPriceTextField.isHidden = true
+                dateSoldLabel.isHidden = true
+                salesPriceLabel.isHidden = true
+                clearButton.isHidden = true
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,12 +60,6 @@ class AddViewController: UIViewController {
         if car == nil {
             deleteButton.isHidden = true
             addButton.setTitle("Add", for: .normal)
-
-            dateSoldTextField.isHidden = true
-            salesPriceTextField.isHidden = true
-            dateSoldLabel.isHidden = true
-            salesPriceLabel.isHidden = true
-            clearButton.isHidden = true
         } else {
             deleteButton.isHidden = false
             addButton.setTitle("Update", for: .normal)
@@ -67,16 +78,6 @@ class AddViewController: UIViewController {
             zeroToSixtyTextField.text = car.zeroToSixty
             soldSwitch.isOn = car.sold
             carSold = car.sold
-
-
-            // If there is a car, but the car is NOT sold
-            if !carSold {
-                dateSoldTextField.isHidden = true
-                salesPriceTextField.isHidden = true
-                dateSoldLabel.isHidden = true
-                salesPriceLabel.isHidden = true
-                clearButton.isHidden = true
-            }
 
             if car.soldDate != nil {
                 let dateFormatter = DateFormatter()
@@ -218,18 +219,6 @@ class AddViewController: UIViewController {
             salesPriceTextField.text = nil
             dateSelected = nil
             salesPrice = 0
-
-            dateSoldTextField.isHidden = true
-            salesPriceTextField.isHidden = true
-            dateSoldLabel.isHidden = true
-            salesPriceLabel.isHidden = true
-            clearButton.isHidden = true
-        } else {
-            dateSoldTextField.isHidden = false
-            salesPriceTextField.isHidden = false
-            dateSoldLabel.isHidden = false
-            salesPriceLabel.isHidden = false
-            clearButton.isHidden = false
         }
     }
 
