@@ -14,10 +14,12 @@ class AddViewController: UIViewController {
     @IBOutlet weak var soldLabel: UILabel!
     @IBOutlet weak var dateSoldLabel: UILabel!
     @IBOutlet weak var salesPriceLabel: UILabel!
+    @IBOutlet weak var clearButton: UIButton!
 
     var car: Car?
     var carSold: Bool = false
     var dateSelected: Date?
+    var salesPrice = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,10 +38,17 @@ class AddViewController: UIViewController {
 
     // Setup Methods
 
+    /// add hidden properties to setup when creating a car
     func setupUI() {
         if car == nil {
             deleteButton.isHidden = true
             addButton.setTitle("Add", for: .normal)
+
+            dateSoldTextField.isHidden = true
+            salesPriceTextField.isHidden = true
+            dateSoldLabel.isHidden = true
+            salesPriceLabel.isHidden = true
+            clearButton.isHidden = true
         } else {
             deleteButton.isHidden = false
             addButton.setTitle("Update", for: .normal)
@@ -58,6 +67,16 @@ class AddViewController: UIViewController {
             zeroToSixtyTextField.text = car.zeroToSixty
             soldSwitch.isOn = car.sold
             carSold = car.sold
+
+
+            // If there is a car, but the car is NOT sold
+            if !carSold {
+                dateSoldTextField.isHidden = true
+                salesPriceTextField.isHidden = true
+                dateSoldLabel.isHidden = true
+                salesPriceLabel.isHidden = true
+                clearButton.isHidden = true
+            }
 
             if car.soldDate != nil {
                 let dateFormatter = DateFormatter()
@@ -141,7 +160,6 @@ class AddViewController: UIViewController {
             soldDate = nil
         }
 
-        var salesPrice = Int()
         if salesPriceTextField.text != "" {
             let salesPriceText = salesPriceTextField.text
             salesPrice = Int(salesPriceText!)!
@@ -149,6 +167,7 @@ class AddViewController: UIViewController {
             salesPrice = 0
         }
 
+        /// Prints
         print("sold? \(carSold)")
 
         print("SOLD DATE =")
@@ -160,6 +179,8 @@ class AddViewController: UIViewController {
 
         print("SALES PRICE =")
         print("\(salesPrice)")
+
+        /// Logic checks when adding/updating a car
 
         if carSold == true {
             if soldDate == nil || salesPrice == 0 {
@@ -196,12 +217,27 @@ class AddViewController: UIViewController {
             dateSoldTextField.text = nil
             salesPriceTextField.text = nil
             dateSelected = nil
+            salesPrice = 0
+
+            dateSoldTextField.isHidden = true
+            salesPriceTextField.isHidden = true
+            dateSoldLabel.isHidden = true
+            salesPriceLabel.isHidden = true
+            clearButton.isHidden = true
+        } else {
+            dateSoldTextField.isHidden = false
+            salesPriceTextField.isHidden = false
+            dateSoldLabel.isHidden = false
+            salesPriceLabel.isHidden = false
+            clearButton.isHidden = false
         }
     }
 
     @IBAction func clearButtonTapped(_ sender: UIButton) {
         dateSoldTextField.text = ""
+        salesPriceTextField.text = ""
         dateSelected = nil
+        salesPrice = 0
     }
     
 }

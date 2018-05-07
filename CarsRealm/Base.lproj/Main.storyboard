@@ -654,6 +654,7 @@
                     </view>
                     <connections>
                         <outlet property="addButton" destination="Wd7-mC-6MZ" id="aYL-HX-0B3"/>
+                        <outlet property="clearButton" destination="E6C-WY-kJV" id="8tB-k2-UZe"/>
                         <outlet property="dateSoldLabel" destination="jKV-s6-Sdh" id="zZF-Lb-PV5"/>
                         <outlet property="dateSoldTextField" destination="iPE-nL-sZS" id="Kve-Qj-ate"/>
                         <outlet property="deleteButton" destination="lVO-Yd-LP4" id="4oH-PB-mGm"/>
