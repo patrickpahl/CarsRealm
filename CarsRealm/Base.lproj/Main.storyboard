@@ -396,13 +396,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWK-zs-q3Z">
-                                <rect key="frame" x="301" y="122" width="34" height="30"/>
-                                <state key="normal" title="clear"/>
-                                <connections>
-                                    <action selector="clearButtonTapped:" destination="mHH-NH-Xf0" eventType="touchUpInside" id="bhe-c4-hk6"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3d9-bn-XwA">
                                 <rect key="frame" x="0.0" y="175.5" width="375" height="491.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -439,9 +432,7 @@
                             <constraint firstItem="J67-i2-pOH" firstAttribute="top" secondItem="fZX-zh-LdA" secondAttribute="top" constant="20" id="0K3-iQ-IoR"/>
                             <constraint firstItem="Kow-lc-Amw" firstAttribute="leading" secondItem="fZX-zh-LdA" secondAttribute="leading" constant="15" id="0xl-b4-xhc"/>
                             <constraint firstItem="3d9-bn-XwA" firstAttribute="trailing" secondItem="fZX-zh-LdA" secondAttribute="trailing" id="25N-Ke-rLG"/>
-                            <constraint firstItem="fZX-zh-LdA" firstAttribute="trailing" secondItem="eWK-zs-q3Z" secondAttribute="trailing" constant="40" id="4E8-vI-1SE"/>
                             <constraint firstItem="3d9-bn-XwA" firstAttribute="bottom" secondItem="fZX-zh-LdA" secondAttribute="bottom" id="Dxx-rk-wAr"/>
-                            <constraint firstItem="eWK-zs-q3Z" firstAttribute="top" secondItem="J67-i2-pOH" secondAttribute="bottom" constant="8" id="IHQ-K2-SUg"/>
                             <constraint firstItem="uPg-kl-pIf" firstAttribute="top" secondItem="fZX-zh-LdA" secondAttribute="top" constant="20" id="L59-9U-ZJ5"/>
                             <constraint firstItem="3d9-bn-XwA" firstAttribute="top" secondItem="05s-Ex-DH3" secondAttribute="bottom" constant="15" id="M88-Jo-kq0"/>
                             <constraint firstItem="4IB-mZ-TCc" firstAttribute="leading" secondItem="fZX-zh-LdA" secondAttribute="leading" constant="15" id="Olj-cg-6AS"/>

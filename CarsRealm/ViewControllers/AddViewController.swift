@@ -152,7 +152,11 @@ class AddViewController: UIViewController {
         print("sold? \(carSold)")
 
         print("SOLD DATE =")
-        print(soldDate)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .full
+        if let soldDate = soldDate {
+            print(dateFormatter.string(from: soldDate)) }
+        
 
         print("SALES PRICE =")
         print("\(salesPrice)")

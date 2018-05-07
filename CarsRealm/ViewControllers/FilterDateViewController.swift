@@ -14,7 +14,8 @@ class FilterDateViewController: UIViewController, UITableViewDelegate, UITableVi
     var endDateSelected: Date?
     let startDatePicker = UIDatePicker()
     let endDatePicker = UIDatePicker()
-    var cars: [Car]?  ///var cars: Results<Car>?
+    var cars: [Car]?  //var cars: Results<Car>?
+    let cal = Calendar(identifier: .gregorian)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +24,11 @@ class FilterDateViewController: UIViewController, UITableViewDelegate, UITableVi
         tableView.delegate = self
         setupCloseKeyboardGesture()
         setupDatePickerView()
+        setupDefaultDates()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-
-        ///getAllSoldCars()
     }
 
     // Setup
@@ -64,31 +64,37 @@ class FilterDateViewController: UIViewController, UITableViewDelegate, UITableVi
         endDateTextField.inputAccessoryView = toolbar
     }
 
-    // Methods
-    ///
-    /*
-    func getAllSoldCars() {
-        cars = DataController.shared.filterSoldCars().sorted(byKeyPath: "soldDate", ascending: false)
-        tableView.reloadData()
+    func setupDefaultDates() {
+        let date = Date()
+        let beginDate = cal.startOfDay(for: date) // Beginning of date at midnight
+        let endingDate = cal.date(byAdding: .day, value: 1, to: beginDate)
+        // End date: date at midnight + 1 day to get full day. For logic only, not UI.
+        startDateSelected = beginDate
+        endDateSelected = endingDate
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        startDateTextField.text = dateFormatter.string(from: beginDate)
+        endDateTextField.text = dateFormatter.string(from: beginDate)
     }
-     */
+
+    // Methods
 
     @objc func datePickerChanged(sender: UIDatePicker) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .short
+        let beginningOfDate = cal.startOfDay(for: sender.date)
 
         if sender == startDatePicker {
-            startDateSelected = sender.date
-            startDateTextField.text = dateFormatter.string(from: sender.date)
-            if let startDateSelected = startDateSelected {
-                print("Start date = \(dateFormatter.string(from: startDateSelected))") }
+            startDateSelected = beginningOfDate
+            startDateTextField.text = dateFormatter.string(from: beginningOfDate)
         }
 
         if sender == endDatePicker {
-            endDateSelected = sender.date
-            endDateTextField.text = dateFormatter.string(from: sender.date)
-            if let endDateSelected = endDateSelected {
-                print("End date = \(dateFormatter.string(from: endDateSelected))") }
+            let endingDate = cal.date(byAdding: .day, value: 1, to: beginningOfDate)
+            endDateSelected = endingDate
+            print("End date selected (cuurent date + 1) \(dateFormatter.string(from: endDateSelected!))")
+            endDateTextField.text = dateFormatter.string(from: beginningOfDate)
         }
     }
 
@@ -103,21 +109,12 @@ class FilterDateViewController: UIViewController, UITableViewDelegate, UITableVi
 
         guard let startDate = startDateSelected,
             let endDate = endDateSelected else {
-            print("Need both start and end date")
-            return
+                print("Need both start and end date")
+                return
         }
 
         cars = DataController.shared.searchSoldCarsBySelectedDates(startDate: startDate, endDate: endDate)
         tableView.reloadData()
-    }
-
-    @IBAction func clearButtonTapped(_ sender: UIButton) {
-        startDateSelected = nil
-        endDateSelected = nil
-        startDateTextField.text = nil
-        endDateTextField.text = nil
-
-        ///getAllSoldCars()
     }
 
     // TableView Methods
@@ -128,7 +125,7 @@ class FilterDateViewController: UIViewController, UITableViewDelegate, UITableVi
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath)
 
         guard let cars = cars else { return UITableViewCell() }
         let car = cars[indexPath.row]

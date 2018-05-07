@@ -55,7 +55,7 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
     // Action
 
     @IBAction func filterButtonTapped(_ sender: UIButton) {
-        guard let makeText = makeTextField.text else { return }
+        guard let makeText = makeTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) else { return }
 
         cars = DataController.shared.filterByMakeName(makeText).sorted(byKeyPath: "year", ascending: false)
         tableView.reloadData()
@@ -63,6 +63,7 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
 
     @IBAction func clearButtonTapped(_ sender: UIButton) {
         loadAllCarsSortedByYear()
+        makeTextField.text = ""
     }
     
 }
